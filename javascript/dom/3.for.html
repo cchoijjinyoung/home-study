@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="main.js"></script>
+</head>
+<body>
+    <script>
+
+      var ar = ["hello", "hi", "greeting"];
+      var ob = {id:1, title:"hello", writeId:"choi"};
+      // for-in 문
+      //for(var i=0; i<ar+1; i++)
+      for(var i in ar)
+        // document.write(d+"<br />");
+        // d에 값이아니라 index가 들어간다. => 0, 1, 2
+        document.write(ar[i]+"<br/>");
+
+      for(var i in ob)
+        document.write(ob[i]+"<br/>");
+        // for-in문은 배열이나 오브젝트 둘다 같은 문법으로 통일성을 주기 위해, 값이 아닌 index를 넘겨준것같다.
+        
+    </script>
+</body>
+</html>
+
