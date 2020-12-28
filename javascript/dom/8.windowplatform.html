@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="main.js"></script>
+</head>
+<body>
+    <script>
+     
+     var x = prompt("x의 값을 입력히세요", 0);
+     var y = prompt("y의 값을 입력히세요", 0);
+     x = parseInt(x);
+     y = parseInt(y);
+     // parseInt("12abc") => 12
+     alert(typeof x);
+     alert(x + y); // ex) string 3 + 4 = 34
+     // parseInt 후에는 7
+
+     var answer = confirm("정말로 삭제하실 생각입니까?");
+     // confirm = boolean (확인: true / 취소: false)
+     if(answer)
+      alert("삭제되었습니다.");
+
+
+    </script>
+</body>
+</html>
+
