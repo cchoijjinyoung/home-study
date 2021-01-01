@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="scriptExam/javascript-dom1.js"></script>
+  <!-- 
+    계산기 프로그램 만들기 예제2
+    id를 다주는 것보다 section에 id를 줌으로써 편하게 관리하자.
+
+      <section id="sec1">
+        <h1></h1>
+        <ul>
+          <li>번호1</li>
+          <li>번호2</li>
+          <li>번호3</li>
+        </ul>
+      </section> 
+
+      var lis = sec1.getElementsByTagName("li");
+      lis[0].textContent = "Hello";
+      로 <li>태그의 배열(번호1, 번호2, 번호3)에 접근 할 수 있다.
+
+      
+  -->
+
+</head>
+<body>
+    <section id="ex2">
+      <h1>Ex2 : 엘리먼트 선택방법 개선하기</h1>
+      <div>
+        <input class="txt-x" type = "text" value="0" dir="rtl"/>
+        +
+        <input class="txt-y" type = "text" value="0" dir="rtl"/>
+        <input class="btn-add" type = "button" value="=">
+        <input class="txt-sum" type = "text" value="0" readonly dir="rtl"/>
+      </div>
+    </section>
+  
+    <section>
+      <h1>Ex1 : 게산기 프로그램</h1>
+      <div>
+        <input id="txt-x" type = "text" value="0" dir="rtl"/>
+        +
+        <input id="txt-y" type = "text" value="0" dir="rtl"/>
+        <input id="btn-add" type = "button" value="=">
+        <input id="txt-sum" type = "text" value="0" readonly dir="rtl"/>
+      </div>
+    </section>
+  
+    
+</body>
+</html>
+
