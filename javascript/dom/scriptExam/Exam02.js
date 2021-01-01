@@ -5,6 +5,8 @@ window.addEventListener("load", function(){
   var txtY = ex2.getElementsByClassName("txt-y")[0];
   var btnAdd = ex2.getElementsByClassName("btn-add")[0];
   var txtSum = ex2.getElementsByClassName("txt-sum")[0];
+  // Element's' 이기때문에 ()안 애들은 배열이다. 
+  // => 그러므로 [0]을 붙여주자.
 
   /*
   var inputs = ex2.getElementsByTagName("input");
