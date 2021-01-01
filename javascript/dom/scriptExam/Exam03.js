@@ -9,7 +9,8 @@ window.addEventListener("load", function(){
   var txtY = ex3.querySelector(".txt-y");
   var btnAdd = ex3.querySelector(".btn-add");
   var txtSum = ex3.querySelector("input[name=sum]");
-  // input name="sum" 일 때 querySelector 를 사용해서
+  // input name="sum" 일 때 
+  // querySelector 에 'css selector' 문법을 사용한다면!
   // 이렇게 표현할 수도 있다.
   // jquery가 각광받은 이유.
 
