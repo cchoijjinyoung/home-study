@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 
+    (1) 우리는 window가 loading 을 완료했을 때 코드를 실행하게 된다
+    window에서의 로딩과 body의 로딩 차이점
+    => body 로딩의 외적인 것들(css, file들)도 포함한다.
+
+    우리는 window 가 로딩을 완료하였을 때 init() 이라는 함수를 실행시켜줄 것이다 . 
+    *init함수 -> btnPrint.onclick = printResult;
+    => 코드 : window.onload = init;
+
+    (2) html 코드에서는  html스럽게
+    javascript 코드에서는 javascript 스럽게.
+    ex) btnPrint , btn-print (낙타표기법 , 대시(-))
+    명명 규칙 btn-print 를 document.getElementById("btn-print");
+    btnPrint 객체에 넘겨주자!
+
+    <input id="btnPrint" => btn-print/>
+
+    (3) 함수안에 변수 선언해주기
+    var btnPrint = document.getElementById("btn-print");
+
+    하지만 여기서 여러 함수안에 같은 변수를 선언할꺼면, 
+    전역변수로 한 번 선언하는게 어떨까? 하는 의문을 품게된다.
+    var btnPrint = null; 처럼!
+    그러나 올바르지 않다! 충돌이 날 수 있기 때문이다.
+    다음 시간에 전역변수를 사용하지 않고 이것을 해결해보자
+  -->
+  <script src="main.js"></script>
+  <script>
+    function printResult() {
+      var btnPrint = document.getElementById("btn-print");
+      // btn-print 로 명명한 id 가 있으니 객체에 넘겨줘~
+
+      var x = prompt("x값 입력");
+      var y = prompt("y값 입력");
+      x = parseInt(x);
+      y = parseInt(y);
+        btnPrint.value = x + y;
+        //input은 value가 있어서 .value를 사용 가능하지만
+        //span에서는 innerText로 사용해주어야한다.
+      }
+      //span1.innerText = x + y;
+    function printResult2() {
+      var x = prompt("x값 입력");
+      var y = prompt("y값 입력");
+      x = parseInt(x);
+      y = parseInt(y);
+        span1.innerText = x + y;
+    }
+
+    function init() {
+      var btnPrint = document.getElementById("btn-print");
+      btnPrint.onclick = printResult;
+      span1.onclick = printResult2;
+    }
+    window.onload = init;
+    </script>
+</head>
+<body>
+  <input type="button" value="클릭" id="btn-print"/><br />
+    <span id="span1">스팬입니다.</span>
+    
+</body>
+</html>
+
