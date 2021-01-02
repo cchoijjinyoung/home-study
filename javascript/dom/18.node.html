@@ -8,40 +8,32 @@
   <script src="scriptExam/javascript-dom1.js"></script>
 </head>
 <body>
-    <section id="ex5">
-      <h1>Ex5 : 엘리먼트 노드의 속성 & CSS 속성 변경</h1>
-      <div>
-        <input class="src-input" list="img-list"/>
-
-        <datalist id="img-list">
-          <option value="img1.jpg">img1</option>
-          <option value="img2.jpg">img2</option>
-          <option value="img3.jpg">img3</option>
-        </datalist>
-
-        <select class="img-select">
-          <option value="img1.jpg">img1</option>
-          <option value="img2.jpg">img2</option>
-          <option value="img3.jpg">img3</option>
-        </select>
-        <input type="color" class="color-input"/>
-        <input class="change-button" type="button" value="변경하기"/>
-      </div>
-      <div>
-          <img class="img" src="images/img1.jpg" style="border:5px solid red;"/>
-          <!-- border 의 color만 바꿔보고 싶다.-->
-      </div>
-    </section>
-    <hr/>
-
     <section id="ex4">
       <h1>Ex4 : childNodes를 이용한 노드 선택</h1>
       <div class="box">
         <input />
         <input />
+        <!-- 
+          그나저나 Node란 개념이 잘 안잡힌다..
+          - tree구조에서 데이터의 상하위 계층을 나타내는 위치의 항목.
+          - 계층적 단위.
+          - HTML DOM은 node에 정보를 저장한다.
+        -->
+
+        <!--
+          Element Node -> 태그들
+          Attr Node -> 태그 안 속성들
+          Entity -> <, > 대신 사용할 수 있는 예약문자(lt, gt)
+          EntityReference -> lt, gt는 혼자서 오면 결국 text
+            <, > 로 사용하기 위해 entity를 감싸주는 node(&, ;)
+            => &lt;
+          text -> 흔히 보는 텍스트
+          comment -> 주석
+          
+        -->
+
       </div>
     </section>
-    <hr/>
 
     <section id="ex3">
       <h1>Ex3 : Selectors API Level1</h1>

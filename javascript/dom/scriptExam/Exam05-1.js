@@ -1,20 +1,15 @@
-//Ex5: 엘리먼트 노드의 속성 & CSS 속성 변경.
+//Ex5: 엘리먼트 노드의 속성 변경.
 window.addEventListener("load", function(){
   var section = document.querySelector("#ex5");
   var srcInput = ex5.querySelector(".src-input");
   var imageSelect = ex5.querySelector(".img-select");
   var changeButton = ex5.querySelector(".change-button");
   var img = ex5.querySelector(".img");
-  var colorInput =  ex5.querySelector(".color-input");
 
   changeButton.onclick = function() {
      img.src = "images/" +srcInput.value;
-    // img.src = "images/" +imageSelect.value;
+    //img.src = "images/" +imageSelect.value;
     // 사용자가 선택한 value값이 imageSelect.value에 등장.
-    // img.style.border-color = ?;   --------- 말이 안되는 문법.
-    // img.style["border-color"] = colorInput.value;
-     img.style.borderColor = colorInput.value;
-     console.log(img.className);
   }
 });
 
