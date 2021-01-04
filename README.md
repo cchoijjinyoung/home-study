@@ -2,7 +2,7 @@
 
 나의 공부기록.
 
-## JavaScript
+## :exclamation: JavaScript
 
 ### 2020/1/1
 - calculate.
