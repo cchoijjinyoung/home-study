@@ -1,3 +1,89 @@
+//Ex8-2 노드 삽입과 바꾸기
+// Ex8 보다 훨씬 직관적으로 할 수 있다.
+window.addEventListener("load", function(){
+
+  var section = document.querySelector("#section8");
+  
+  var noticeList =section.querySelector(".notice-list"); 
+  var tbodyNode = noticeList.querySelector("tbody");
+  var upButton = section.querySelector(".up-button");
+  var downButton = section.querySelector(".down-button");
+
+  // tbodyNode에서 첫번째 Element를 고른다.(tr)
+  var currentNode = tbodyNode.firstElementChild;//.children[0];
+
+  downButton.onclick = function(){
+    var nextNode = currentNode.nextElementSibling;
+    if(nextNode == null) {
+      alert("더 이상 이동할 수 없습니다.")
+      return;
+    }
+    // 야 nextNode 너 내 앞으로 와!
+    currentNode.insertAdjacentElement("beforebegin", nextNode);
+  };
+
+  upButton.onclick = function(){
+    var prevNode = currentNode.previousElementSibling;
+    if(prevNode == null) {
+      alert("더 이상 위로 이동할 수 없습니다.")
+      return;
+    }
+    // 야 prevNode 너 내 뒤로 와!
+    currentNode.insertAdjacentElement("afterend", prevNode);
+  };
+
+});
+
+//Ex8-노드 삽입과 바꾸기
+// window.addEventListener("load", function(){
+
+//   var section = document.querySelector("#section8");
+  
+//   var noticeList =section.querySelector(".notice-list"); 
+//   var tbodyNode = noticeList.querySelector("tbody");
+//   var upButton = section.querySelector(".up-button");
+//   var downButton = section.querySelector(".down-button");
+
+//   // tbodyNode에서 첫번째 Element를 고른다.(tr)
+//   var currentNode = tbodyNode.firstElementChild;//.children[0];
+
+//   downButton.onclick = function(){
+//     // 아래로 버튼을 누르면,
+//       var nextNode = currentNode.nextElementSibling;
+//     // 현재노드의 next형제노드를 지정해주고
+
+//       if(nextNode == null) {
+//         alert("더 이상 이동할 수 없습니다.")
+//         return;
+//       }
+//       // nextNode가 없으면 오류.(맨아래까지 내려왔으니까.)
+//       tbodyNode.removeChild(nextNode);
+//       // 그게 아니라면 화면에서 nextNode를 지운다.
+//       // 메모리는 남아있다. 참조하는 녀석이 있기때문에.
+//       // nextNode를 앞에 칸에 삽입해줘야함.
+//       // 현재는 순서가 1234 에서 1(2)34가 되겠지. ---> 2134 로 만들어보자.
+//       tbodyNode.insertBefore(nextNode, currentNode);
+//       // nextNode를 기준점(currentNode) 앞에 삽입한다.
+
+//       // 사실, remove 필요없이 insertBefore만 해도된다.
+//       // 이해를 돕기위해 remove를 사용하였다.
+//   };
+
+//   upButton.onclick = function(){
+//     var prevNode = currentNode.previousElementSibling;
+//     if(prevNode == null) {
+//       alert("더 이상 위로 이동할 수 없습니다.")
+//       return;
+//     }
+//     // 아래로 버튼과 다르게, insertBefore 버튼은 기준점의
+//     // '앞'으로 이동하는 것이기 때문에 떼어내야할것이 current다.
+//     tbodyNode.removeChild(currentNode);
+//     // 그 후 current를  prev  앞에 붙인다.
+//     tbodyNode.insertBefore(currentNode, prevNode);
+//   };
+
+// });
+
 //Ex7 : 노드 복제와 템플릿 태그
 window.addEventListener("load", function(){
   var notices = [
