@@ -1,3 +1,28 @@
+//Ex7 : 노드 복제와 템플릿 태그
+window.addEventListener("load", function(){
+  var notices = [
+      {id:5, title:"퐈이야~~~", regDate:"2019-01-26", writerId:"newlec", hit:0},
+      {id:6, title:"나 좀 복제해줘~", regDate:"2019-01-26", writerId:"newlec", hit:17}
+  ];
+
+  var section = document.querySelector("#section7");
+  
+  var noticeList =section.querySelector(".notice-list"); 
+  var tbodyNode = noticeList.querySelector("tbody");
+  var cloneButton = section.querySelector(".clone-button");
+  var templateButton = section.querySelector(".template-button");
+
+  cloneButton.onclick = function(){
+      
+  };
+
+  templateButton.onclick = function(){
+      
+      
+  };
+
+});
+
 //Ex6: 노드조작: 메뉴추가(createTextNode, Element).
 window.addEventListener("load", function(){
   var section = document.querySelector("#ex6");
@@ -8,7 +33,8 @@ window.addEventListener("load", function(){
 
   addButton.onclick = function(){
     var title = titleInput.value;
-    var html = '<a href="">'+title+'</a>';
+
+     var html = '<a href="">'+title+'</a>';
     menuListUl.innerHTML += '<li><a href="">'+title+'</a></li>';
 
     /* 이렇게 직접만드는것은 힘들다.

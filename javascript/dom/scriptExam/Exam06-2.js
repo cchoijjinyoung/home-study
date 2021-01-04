@@ -8,7 +8,8 @@ window.addEventListener("load", function(){
 
   addButton.onclick = function(){
     var title = titleInput.value;
-    var html = '<a href="">'+title+'</a>';
+
+     var html = '<a href="">'+title+'</a>';
     menuListUl.innerHTML += '<li><a href="">'+title+'</a></li>';
 
     /* 이렇게 직접만드는것은 힘들다.
