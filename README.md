@@ -36,6 +36,7 @@
 - element.
   - span - innerText
   - input - value
+
 ### 2020/1/2
 - window loading.
   - window.onload = init;
@@ -54,6 +55,7 @@
 - 예제5-1 : element node 속성 변경.
 - 예제5-2 : CSS 속성 변경.
 - 예제6 : node 추가/삭제 하기.
+
 ### 2020/1/3
 - 예제6-2 : 노드조작 / 메뉴 추가.
 - 예제7 : 노드복제와 템플릿태그.
@@ -61,5 +63,20 @@
 - 예제8 : 노드 삽입과 바꾸기(위로, 아래로)
   - firstElementChild, prev / nextElementSibling, insertBefore
   - insertAdjacentElement(beforebegin / afterend, 대상)
+
+### 2020/1/4
+- 예제9 : 다중 노드선택 방법과 일괄삭제, 엘리먼트의 자리바꾸기.
+  - onchange = 바뀌었을때 실행되는 event
+  - checkbox의 value, checked(true, false)
+  - input들 중에서 타입을 지정해서 가져오기.
+    ```
+    var inputs = tbody.querySelectorAll("input[type='checkbox']");
+    ```
+  - css 셀렉터의 sudo 클래스 = 체크된 것만 선택적으로 가져오기
+    ```
+    var inputs = tbody.querySelectorAll("input[type='checkbox']:checked");
+    ```
+  - parentElement 의 parentElement 두 번 연달아 사용해도된다.
+  - replaceWith
 
 

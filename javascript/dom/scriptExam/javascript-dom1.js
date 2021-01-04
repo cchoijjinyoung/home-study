@@ -1,3 +1,71 @@
+
+//Ex9-다중 노드선택 방법과 일괄삭제, 노드의 자리바꾸기
+window.addEventListener("load", function(){
+
+  var section = document.querySelector("#section9");
+  
+  var noticeList =section.querySelector(".notice-list"); 
+  var tbody = noticeList.querySelector("tbody");
+  var allCheckbox = section.querySelector(".overall-checkbox");
+  var delButton = section.querySelector(".del-button");
+  var swapButton = section.querySelector(".swap-button");
+
+  allCheckbox.onchange = function(){
+    // onchange on/off 처럼 바뀌었을때 실행되는 녀석.
+    console.log(allCheckbox.value);
+    console.log(allCheckbox.checked);
+    // checkbox의 value가 없으므로 기본값이 on으로 나온다.
+    // value = "바나나" 면 바나나라고 나오겠지..?
+    // 체크하면 checked는 true 아니면 false.
+
+    // 우리는 thead에 있는 체크박스가 바뀌면 input들 값을 모두 가져올 것이다.
+    var inputs = tbody.querySelectorAll("input[type='checkbox']");
+    // input 타입이 체크박스인 것만 가져올 수 있다.
+    for (var i=0; i<inputs.length; i++)
+      inputs[i].checked=allCheckbox.checked;
+      // all체크박스의 checked와(true/false) 같게 만든다.
+  };
+
+  delButton.onclick = function(){
+    // checked가 true인 input을 삭제하는것이 아닌!
+    // row를 삭제해야하는것이다. 코드를 작성해보자.
+    var inputs = tbody.querySelectorAll("input[type='checkbox']:checked");
+    // css셀렉터의 sudo클래스 - 체크된 것만 선택적으로 가져오자.
+    console.log(inputs.length);
+    for(var i=0; i<inputs.length; i++)
+    inputs[i].parentElement.parentElement.remove();
+    // 부모의 부모(tr)를 삭제한다.
+  };
+
+  swapButton.onclick = function(){
+    /*
+    # 사용한 방법.
+    1) 엘리먼트는 2개만 선택하게끔 그 의외는 오류를 띄운다.
+    2) 선택된 2개의 엘리먼트의 tr을 trs[]배열에 담는다.
+    3) 각각의 tr을 A, B라 칭하겠다.
+       A를 클론하여 tr을 하나 더(A2라 칭하겠다.) 생성한다.
+    4) B는 replaceWith를 이용하여 A2와 바꾼다.
+    5) A는 기존의 A2가 있던 자리에 있는 B와 replaceWith한다.
+      * 이렇게 하는 이유는 tr들이 엄청 많다고 생각하면, 서로를 스왑하기란 상대의 자리를 찾아 서로가 바꿔 들어가야 하는데, 자리를 찾는 것이 상당히 까다롭기때문이다.
+    */
+    var inputs = tbody.querySelectorAll("input[type='checkbox']:checked");
+    if(inputs.length != 2) {
+      alert("엘리먼트는 2개른 선택하여야만 해요!");
+      return;
+    }
+    var trs = [];
+    // inputs라는 두개의 엘리먼트의 tr을 trs배열에 담을 것이다.
+    for(var i=0; i<inputs.length; i++)
+      trs.push(inputs[i].parentElement.parentElement);
+
+    var cloneNode = trs[0].cloneNode(true);
+    trs[1].replaceWith(cloneNode);
+    trs[0].replaceWith(trs[1]);
+
+    // trs[0] trs배열이란 지역변수를 참조하고 있기 때문에 함수가 끝나면 쓰레기가 되서 사라진다.
+  };
+});
+
 //Ex8-2 노드 삽입과 바꾸기
 // Ex8 보다 훨씬 직관적으로 할 수 있다.
 window.addEventListener("load", function(){
