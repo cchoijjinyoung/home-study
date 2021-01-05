@@ -39,8 +39,23 @@ window.addEventListener("load", function(){
   var titleSorted = false;
 
   titldTd.onclick = function(){
-      // 이 부분에 새로 배운 내용을 작성해 보세요.
-     
+    tbodyNode.innerHTML = "";
+
+    // 오름차순으로 정렬.
+    if(!titleSorted)
+    notices.sort(function(a,b){
+      titleSorted = true;
+      if(a.title < b.title)
+        return -1;
+      else if(a.title > b.title)
+        return 1;
+      else
+        return 0;
+      });
+    else
+    // 내림차순 정렬.
+      notices.reverse();
+    bindData();
   };
 });
 
