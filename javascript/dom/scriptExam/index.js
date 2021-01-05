@@ -1,48 +1,44 @@
-//Ex10-클릭한 컬럼을 기준으로 레코드 정렬하기 #1
+// Ex3-이벤트 버블링 멈추기
 window.addEventListener("load", function(){
 
-  var notices = [
-      {"id":1, "title":"유투브에 끌려다니지 않으려고 했는데....ㅜㅜ..", "regDate":"2019-02-05", "writerId":"newlec", "hit":2},
-      {"id":2, "title":"자바스크립트란..", "regDate":"2019-02-02", "writerId":"newlec", "hit":0},
-      {"id":3, "title":"기본기가 튼튼해야....", "regDate":"2019-02-01", "writerId":"newlec", "hit":1},
-      {"id":4, "title":"근데 조회수가 ㅜㅜ..", "regDate":"2019-01-25", "writerId":"newlec", "hit":0}
-  ];
-
-  var section = document.querySelector("#section10");
+    var section = document.querySelector("#section3");
+    
+    var imgList = section.querySelector(".img-list"); 
+    var addButton = section.querySelector(".add-button");
+    var currentImg = section.querySelector(".current-img");
+    
+    imgList.onclick = function(e){
+        
+    };
   
-  var noticeList =section.querySelector(".notice-list");
-  var titldTd = section.querySelector(".title");
-  var tbodyNode = noticeList.querySelector("tbody");
-
-  var bindData = function(){
-      var template = section.querySelector("template");
-
-      for(var i=0; i<notices.length; i++){
-          var cloneNode = document.importNode(template.content, true);
-          var tds = cloneNode.querySelectorAll("td");
-          tds[0].textContent = notices[i].id;            
-
-          var aNode = tds[1].children[0];
-          aNode.href=notices[i].id;
-          aNode.textContent = notices[i].title;
-
-          tds[2].textContent = notices[i].regDate;
-          tds[3].textContent = notices[i].writerId;
-          tds[4].textContent = notices[i].hit;
-
-          tbodyNode.appendChild(cloneNode);
-      }
-  };
-
-  bindData();
-
-  var titleSorted = false;
-
-  titldTd.onclick = function(){
-      // 이 부분에 새로 배운 내용을 작성해 보세요.
-     
-  };
-});
-
-
-
+    addButton.onclick = function(e){
+        
+    };
+  
+  }); 
+  
+  
+  
+  
+  
+  //Ex2-이벤트 버블링을 이용해 사용자 이벤트 처리하기:event Bubbling
+  window.addEventListener("load", function(){
+  
+    var section = document.querySelector("#section2");
+    var imgList = section.querySelector(".img-list"); 
+    var currentImg = section.querySelector(".current-img");
+    
+    imgList.onclick = function(e){
+        
+    };
+  }); 
+  
+  
+  //연습문제 1-선택된 레코드 삭제하기:event target
+  window.addEventListener("load", function(){
+  
+    
+  }); 
+  
+  
+  

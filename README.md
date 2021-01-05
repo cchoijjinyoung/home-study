@@ -79,4 +79,11 @@
   - parentElement 의 parentElement 두 번 연달아 사용해도된다.
   - replaceWith
 
+### 2020/1/5
+- 예제10 : 클릭한 컬럼을 기준으로 레코드 정렬하기(오름차순, 내림차순).
+  - sort, reverse
+- 이벤트 객체의 target 속성 이용하기.
+  - event.target
+  - 이벤트 객체를 어떻게 얻을 수 있을까?
+
 
