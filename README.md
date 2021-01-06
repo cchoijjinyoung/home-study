@@ -86,4 +86,8 @@
   - event.target
   - 이벤트 객체를 어떻게 얻을 수 있을까?
 
+### 2020/1/6
+- eventBubbling : img클릭 - imgList가 처리할 수 있다.
+- stoppropagation : 버블링 전파 막기.
+
 
