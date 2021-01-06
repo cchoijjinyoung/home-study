@@ -89,5 +89,6 @@
 ### 2020/1/6
 - eventBubbling : img클릭 - imgList가 처리할 수 있다.
 - stoppropagation : 버블링 전파 막기.
+- 여러 버튼을 가진 화면에서 이벤트의 처리 방법
 
 
