@@ -107,5 +107,17 @@ fileTriggerButton.onclick = function() {
     fileButton.dispatchEvent(event);
   }
 ```
+- Mouse 이벤트 포지션.
+  - div(클래스: 컨테이너) 안의 박스를 내가 클릭한 곳으로 옮겨보자!
+  - position이 기본적으로 static으로 설정되어 있다.
+    - box.style.position = "absolute"; 나 "fix"; 등으로 바꿔주자!
+  - 좌표의 숫자(x, y) 값을 가져왔다면 px과 같이 단위를 적어주자!
+
+- 마우스 이벤트 좌표 3가지.
+  - 페이지 영역, 클라이언트 영역, offset 영역
+  - 마우스 드래그를 통해 박스를 이동해보자
+  - page(x, y)좌표에서 offset(x, y)좌표를 빼서 박스의 left, top을 변경하자.
+  - 박스 클릭시에만 박스를 드래그 할 수 있도록 설정.
+  - onmousedown, onmouseup
 
 
