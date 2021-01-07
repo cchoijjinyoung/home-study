@@ -5,7 +5,7 @@ window.addEventListener("load", function(){
   var box = section.querySelector(".box");
 
   container.onclick = function(e) {
-    //e.x, e.y / e.offsetX, e.offsetY / e.clientX, e.pageX...
+    //e.x, e.y / e.offserX, e.offserY / e.clientX, e.pageX...
     // 클릭한 좌표를 콘솔로 출력.
     console.log("(x,y):"+ e.x + "," + e.y);
 
@@ -16,7 +16,6 @@ window.addEventListener("load", function(){
     box.style.left = e.x + "px";
     box.style.top = e.y + "px";
   }
-  // 실행은 되지만, 브라우저의 스크롤을 내린 후 클릭하면 이상한 점이 발견된다. 다음 에제에서 고쳐보자.
 });
 
 //Ex5-Trigger

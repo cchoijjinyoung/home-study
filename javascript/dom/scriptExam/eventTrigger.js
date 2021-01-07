@@ -1,24 +1,3 @@
-//Ex6-MouseEvent Position
-window.addEventListener("load", function(){
-  var section = document.querySelector("#section6");
-  var container = section.querySelector(".container");
-  var box = section.querySelector(".box");
-
-  container.onclick = function(e) {
-    //e.x, e.y / e.offsetX, e.offsetY / e.clientX, e.pageX...
-    // 클릭한 좌표를 콘솔로 출력.
-    console.log("(x,y):"+ e.x + "," + e.y);
-
-    // box.style.position이 기본적으로 static 으로 되어있음.
-    box.style.position = "absolute";
-    // 좌표의 숫자를 얻어왔으면, 단위를 적어줘야한다.
-    // 안적어주면 실행이 안됨.
-    box.style.left = e.x + "px";
-    box.style.top = e.y + "px";
-  }
-  // 실행은 되지만, 브라우저의 스크롤을 내린 후 클릭하면 이상한 점이 발견된다. 다음 에제에서 고쳐보자.
-});
-
 //Ex5-Trigger
 window.addEventListener("load", function(){
   var section = document.querySelector("#section5");
