@@ -90,5 +90,22 @@
 - eventBubbling : img클릭 - imgList가 처리할 수 있다.
 - stoppropagation : 버블링 전파 막기.
 - 여러 버튼을 가진 화면에서 이벤트의 처리 방법
+- 기본 행위를 막아보자 preventDefault();
+
+### 2020/1/7
+- 이벤트 트리거.(event trigger)
+  - 유저가 버튼을 클릭한 적이 없는데, 해당 버튼의 이벤트가 실행될 수 있다.
+  - 어느 경우에 트리거를 사용하게 될까?
+  - A를 통해 발생시킨 이벤트를 B가 실행하게끔 dispatcher해주자.
+```
+fileTriggerButton.onclick = function() {
+    var event = new MouseEvent("click", {
+      'view':window,
+      'bubbles':true,
+      'cancelable':true
+    })
+    fileButton.dispatchEvent(event);
+  }
+```
 
 

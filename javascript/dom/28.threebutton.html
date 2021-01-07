@@ -13,35 +13,6 @@
         <span>|</span>
         <a href="javascript2-event.html">2. DOM 이벤트 프로그래밍 예제</a>
     </nav>
-    <hr />
-    <section id="section5">
-        <h1>Ex5-Event Trigger</h1>
-        <!-- 
-        스타일은 head 에 넣자.
-        스크롤이 귀찮아서 여기다 넣었을뿐..
-        -->
-        <style>
-            .file-button{
-                display: none;
-            }
-            .file-trigger-button{
-                background: green;
-                border: 1px solid lightgreen;
-                border-radius: 5px;
-                padding: 5px 10px;
-                color:#fff;
-                cursor:pointer;
-            }
-            .file-trigger-button:hover{
-                background:limegreen;
-            }
-
-        </style>
-        <input type="file" class="file-button">
-        <span class="file-trigger-button">파일선택</span>
-
-    </section>
-    <hr />
 
     <section id="section4">
         <h1>Ex4-서로 다른 기능의 여러 버튼을 가진 화면에서 이벤트를 처리하는 방법</h1>    
@@ -65,10 +36,9 @@
                     <td>newlec</td>
                     <td>2</td>
                     <td>
-                        <!-- a태그로 버튼을 구현해보자.-->
-                        <a class="sel-button" href="">선택</a> 
-                        <a class="edit-button" href="">수정</a>
-                        <a class="del-button" href="">삭제</a>
+                        <input type="button" class="sel-button" value="선택" />
+                        <input type="button" class="edit-button" value="수정" />
+                        <input type="button" class="del-button" value="삭제" />
                     </td>
                 </tr>
                 <tr>

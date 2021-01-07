@@ -1,18 +1,3 @@
-//Ex5-Trigger
-window.addEventListener("load", function(){
-  var section = document.querySelector("#section5");
-  var fileButton = section.querySelector(".file-button");
-  var fileTriggerButton = section.querySelector(".file-trigger-button");
-
-  fileTriggerButton.onclick = function() {
-    var event = new MouseEvent("click", {
-      'view':window,
-      'bubbles':true,
-      'cancelable':true
-    })
-    fileButton.dispatchEvent(event);
-  }
-});
 //Ex4-서로 다른 기능의 여러 버튼을 가진 화면에서 이벤트를 처리하는 방법
 window.addEventListener("load", function(){
   var section = document.querySelector("#section4");

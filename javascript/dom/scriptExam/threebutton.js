@@ -1,28 +1,11 @@
-//Ex5-Trigger
-window.addEventListener("load", function(){
-  var section = document.querySelector("#section5");
-  var fileButton = section.querySelector(".file-button");
-  var fileTriggerButton = section.querySelector(".file-trigger-button");
-
-  fileTriggerButton.onclick = function() {
-    var event = new MouseEvent("click", {
-      'view':window,
-      'bubbles':true,
-      'cancelable':true
-    })
-    fileButton.dispatchEvent(event);
-  }
-});
 //Ex4-서로 다른 기능의 여러 버튼을 가진 화면에서 이벤트를 처리하는 방법
 window.addEventListener("load", function(){
   var section = document.querySelector("#section4");
   var tbody = section.querySelector(".notice-list tbody");
 
   tbody.onclick = function(e) {
-    // a태그는 현재 이벤트 발생 후 href속성에 의한 기본행위도 발생한다.(페이지 로드) 이것을 막아보자.
-    e.preventDefault();
     var target = e.target;
-    if(target.nodeName != "A")
+    if(target.nodeName != "INPUT")
       return;
 
     if(target.classList.contains = ("sel-button")) {
