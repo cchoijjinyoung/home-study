@@ -4,7 +4,7 @@
 
 ## :exclamation: JavaScript
 
-### 2020/1/1
+### :mag: 2020/1/1
 - calculate.
   - ==, ===의 차이점.
   - "3" 간의 +, - 의 차이점.
@@ -37,7 +37,7 @@
   - span - innerText
   - input - value
 
-### 2020/1/2
+### :mag: 2020/1/2
 - window loading.
   - window.onload = init;
   - 명명 규칙
@@ -56,7 +56,7 @@
 - 예제5-2 : CSS 속성 변경.
 - 예제6 : node 추가/삭제 하기.
 
-### 2020/1/3
+### :mag: 2020/1/3
 - 예제6-2 : 노드조작 / 메뉴 추가.
 - 예제7 : 노드복제와 템플릿태그.
   - cloneNode(true), importNode(  , true)
@@ -64,7 +64,7 @@
   - firstElementChild, prev / nextElementSibling, insertBefore
   - insertAdjacentElement(beforebegin / afterend, 대상)
 
-### 2020/1/4
+### :mag: 2020/1/4
 - 예제9 : 다중 노드선택 방법과 일괄삭제, 엘리먼트의 자리바꾸기.
   - onchange = 바뀌었을때 실행되는 event
   - checkbox의 value, checked(true, false)
@@ -79,20 +79,20 @@
   - parentElement 의 parentElement 두 번 연달아 사용해도된다.
   - replaceWith
 
-### 2020/1/5
+### :mag: 2020/1/5
 - 예제10 : 클릭한 컬럼을 기준으로 레코드 정렬하기(오름차순, 내림차순).
   - sort, reverse
 - 이벤트 객체의 target 속성 이용하기.
   - event.target
   - 이벤트 객체를 어떻게 얻을 수 있을까?
 
-### 2020/1/6
+### :mag: 2020/1/6
 - eventBubbling : img클릭 - imgList가 처리할 수 있다.
 - stoppropagation : 버블링 전파 막기.
 - 여러 버튼을 가진 화면에서 이벤트의 처리 방법
 - 기본 행위를 막아보자 preventDefault();
 
-### 2020/1/7
+### :mag: 2020/1/7
 - 이벤트 트리거.(event trigger)
   - 유저가 버튼을 클릭한 적이 없는데, 해당 버튼의 이벤트가 실행될 수 있다.
   - 어느 경우에 트리거를 사용하게 될까?
