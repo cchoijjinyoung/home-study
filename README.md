@@ -1,4 +1,4 @@
-# :memo: home-study
+# :memo: Home-study
 
 나의 공부기록.
 
