@@ -1,6 +1,7 @@
 # :memo: Home-study
 
 나의 공부기록.
+QueryDSL 적용하기 - nonogram
 
 ## :exclamation: JavaScript
 
