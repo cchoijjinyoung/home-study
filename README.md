@@ -2,6 +2,7 @@
 
 나의 공부기록.
 QueryDSL 적용하기 - nonogram
+2023-06-10 : 스프링 기본정독
 
 ## :exclamation: JavaScript
 
